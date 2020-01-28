@@ -54,8 +54,8 @@ Kakao.init("17c512cbe4e17a204cce3c9b7d64d274"); // 사용할 앱의 JavaScript �
             title : "링크 이동하기" // 버튼 제목
             ,
             link : {
-               mobileWebUrl : "http://${ip}/industry/industryStatus.do?seq="+${iPage.seq},  // 모바일 카카오톡에서 사용하는 웹 링크 URL
-               webUrl : "http://${ip}/industry/industryStatus.do?seq="+${iPage.seq} // PC버전 카카오톡에서 사용하는 웹 링크 URL
+               mobileWebUrl : "http://${ip}/industry/industryStatusDetailView.do?seq="+${iPage.seq},  // 모바일 카카오톡에서 사용하는 웹 링크 URL
+               webUrl : "http://${ip}/industry/industryStatusDetailView.do?seq="+${iPage.seq} // PC버전 카카오톡에서 사용하는 웹 링크 URL
             }
          } ]
       });

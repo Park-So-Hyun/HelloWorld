@@ -769,6 +769,13 @@ span:nth-child(4) {
 				location.href="${pageContext.request.contextPath}/code/modifyR.do?seq="+seq+"&queSeq="+queSeq;
 			}				
         }
+		
+		 function deleteRe(seq,queSeq){
+	         var cf = confirm("삭제하시겠습니까?");
+	         if(cf){
+	            location.href="${pageContext.request.contextPath}/code/deleteR.do?seq="+seq+"&queSeq="+queSeq;
+	         }
+	       }
       
       //닉네임 눌렀을때 새창 띄우기
       function popUp(id,writer){
