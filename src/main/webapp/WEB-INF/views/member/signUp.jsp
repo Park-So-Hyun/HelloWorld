@@ -629,7 +629,6 @@
             });
             
             
-            
             //성별체크
               $("input:radio[name=gender]").click(function(){
 	           genderTest = 1;
