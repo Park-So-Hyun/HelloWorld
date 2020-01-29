@@ -29,7 +29,7 @@
 	</select>
 	<select id="getTop5List" resultType="kh.hello.dto.MemberDTO">
 		select * from (select id, nickName, memLevel, point, lastLogin, profileImg, row_number() over(order by point desc, lastLogin desc) rown 
-		from member where memLevel >= 2) where rown between 1 and 5
+		from member where memLevel >= 2 and point is not null) where rown between 1 and 5
 	</select>
 	<select id="getBoardLog" resultType="kh.hello.dto.BoardLogDTO">
 		select dateis, nvl(newBoard, 0) newBoard, nvl(delBoard, 0) delBoard from (select ab.*, row_number() over(order by 1) rown from (select nb.dateis, newBoard, delBoard from 
