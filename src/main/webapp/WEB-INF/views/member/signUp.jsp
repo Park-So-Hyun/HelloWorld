@@ -616,6 +616,7 @@
 	            }
 	        });
             
+        
             $("#otherJoinPath").on("focusout",function(){
             	 if($("#otherJoinPath").val() != ""){
             		 jpTest = 1;
