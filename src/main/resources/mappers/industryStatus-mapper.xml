@@ -13,7 +13,7 @@
 	</select>
 	
 	<insert id="insertIndustryStatus" parameterType="kh.hello.dto.IndustryStatusDTO">
-		insert into industryStatus values(industryStatusSeq.nextval,#{field},#{duty},#{writer},#{title},#{content},sysdate,0,#{id},#{nonTagContents})
+		insert into industryStatus values(#{seq},#{field},#{duty},#{writer},#{title},#{content},sysdate,0,#{id},#{nonTagContents})
 	</insert>
 	
 	<update id="updateIndustryStatus" parameterType="kh.hello.dto.IndustryStatusDTO">
