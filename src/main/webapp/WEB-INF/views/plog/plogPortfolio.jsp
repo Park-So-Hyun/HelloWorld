@@ -72,7 +72,7 @@
 	                </div>
 	                <div class ="col-12 col-md-8 col-lg-9 wrapportfolio" style="min-height:700px;">
 	                	<c:forEach items="${list}"  var="dto">
-	                		<div class="cardwrap col-6 col-xl-4" onclick="location.href='${pageContext.request.contextPath}/Portfolio/detail.do?seq=${dto.seq}'">
+	                		<div class="cardwrap col-6 col-xl-4" onclick=toDetail(${dto.seq})>
 		                        <div class="cardheight card cd-h" style="cursor:pointer">
 		                            <img src="${dto.image1}" class="card-img-top" alt="..." style="height:20vw;width:85%;margin:7.5%;max-height:250px;">
 		                            <div class="card-body" style="padding:5px;width:100%;height:115px;text-align:left;">
@@ -93,6 +93,9 @@
 							</div>
 						</c:when>
 					</c:choose>
+					<form action="${pageContext.request.contextPath}/Portfolio/detail.do" method="POST" name="seqFrm" id="seqFrm">
+						<input type="hidden" name="seq" id="hiSeq">
+					</form>
 	                </div>
 	            </div>
             </div>
@@ -110,6 +113,10 @@
         
         
 		<script>
+			function toDetail(seq){
+				$("#hiSeq").val(seq);
+				$("#seqFrm").submit();
+			}
             $("#addPF").on("click",function(){
                 location.href = "${pageContext.request.contextPath}/Portfolio/toInsert.do";
             })
